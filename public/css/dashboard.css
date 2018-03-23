@@ -1,0 +1,27 @@
+body {
+    background-color: blue;
+}
+header, .full-width {
+    width: 100%;
+    background-color: rgb(180, 10, 10);
+
+}
+.wrap {
+    width: 80%;
+    max-width: 24em;
+    margin: 0 auto;
+    padding: 0.25em 0.625em;
+    background-color: rgb(180, 10, 10);
+}
+#logo-header-div {
+        width: 25%;
+        /* border: 3px solid rgb(4, 17, 204); */
+        /* padding: 10px;   */
+}
+#text-header {
+    text-align: center;
+}
+
+
+
+
