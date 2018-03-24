@@ -1,8 +1,8 @@
 body {
-    background-color: blue;
+    background-color: #e4e4e4;
     height: 100%;
-    margin: 0;
-    padding: 0;
+    /* margin: 10px;
+    padding: 0px; */
 }
 #container-header {
     width: 100%;
@@ -19,48 +19,65 @@ header {
     width: 100%;
     position: absolute; 
     bottom: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
-.red-color {
-    background-color: red;
+.purple-color {
+    background-color: 	#4e2a84;
+}
+.white-text {
+    color: white;
 }
 #logo-header-div {
-        width: 25%;
-        /* border: 3px solid rgb(4, 17, 204); */
-        /* padding: 10px;   */
+    width: 25%;
+}
+#logo-header {
+    width: 71%;
 }
 #text-header {
     text-align: center;
+    padding-top: 10%;
+    padding-left: 10%;
 }
 .full-length {
     height: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
 }
 .container-sidebar {
     padding-left: 1.8rem;
-    width:25%;
-    background-color: aquamarine;    
+    background-color: 	#4e2a84;    
+}
+#user-photo {
+    padding-left: 1.8rem;
 }
 .sidebar-item {
     overflow: hidden;
     cursor: pointer;
+    /* display: block; */
     width: 100%;
-    display: block;
     padding: 8px 16px;
     text-align: left;
+    margin-right: 15px;
     border: none;
     white-space: normal;
     float: none;
     outline: 0;
+    border: 2px solid rgb(97, 97, 97);
+}
+#career-info-header {
+    clear: both;
+}
+#dash-title {
+    text-align: center;
 }
 p {
-    background-color: green;
-    width: 450px;
+    width: 100%;
+    text-align: center;
 }
-.green {
-    padding: 50px 350px 50px 50px;
+/* .green {
     background-color: green;
     width: 100%;
-}
+} */
 .top-buffer {
     margin-top: 3rem;
 }
