@@ -14,50 +14,144 @@
   </head>
   <body>
         <div id="wrapper-all">
-            <div class="row red-color">
-                <div class="col-lg-6" id="logo-header-div">
-                    <img src="../public/images/fake-logo.png" alt="Failed to load logo" id ="logo-header">
+            <div class="row purple-color">
+            <!-- header content starts here -->
+                <div class="col-lg-3" id="logo-header-div">
+                    <img src="../public/images/cat1.png" alt="Failed to load logo" id ="logo-header">
                 </div>
                 <div class="col-lg-6">
-                    <h2 id="text-header">Header</h2>
+                    <h2 class="white-text" id="text-header">JobCat.Careers</h2>
                 </div>
+            <!-- header ends here -->
             </div>
         
             <div class="row full-length">
-                <div class="col-lg-3 container-sidebar">
+                <div class="col-lg-2 container-sidebar">
+                <!-- sidebar content here     -->
+                    <div class="row sidebar-user-info">
+                            <div class="row">
+                                <p class="white-text">User Info</p>
+                                <img src="./images/userPhoto1.png" alt="Use photo failed to load" id="user-photo">
+                            </div>
+                            <div class="row career-info-list">
+                                <ul>
+                                    <li class="white-text">User name here</li>
+                                    <li class="white-text">Member since</li>
+                                    <li class="white-text">Jobs Applied: 2,564,231</li>
+                                </ul>
+                            </div>
+                        
+                    </div>
+                    <br><br>
                     <div class="row" id="sidebar-menu">
-                        <h3 class="menu-title">Menu</h3>
-                        <a href="#" class="sidebar-item">Link 1</a>
-                        <a href="#" class="sidebar-item">Link 2</a>
-                        <a href="#" class="sidebar-item">Link 3</a>
+                        <h3 class="menu-title white-text">Menu</h3>
+                        <button type="button" href="#" class="sidebar-item btn btn-light">Link 1</button>
+                        <button type="button" href="#" class="sidebar-item btn btn-light">Link 2</button>
+                        <button type="button" href="#" class="sidebar-item btn btn-light">Link 3</button>
                     </div>
-                    <br><br><br><br>
-                    <div class="row sidebar-career-info">
-                        <p>Career Info</p>
-                        <ul>
-                        <li>If you become a: Web Dev</li>
-                        <li>You will make: this many moneys</li>
-                        <li>You need education level: bootcamp</li>
-                    </ul>
-                    </div>
+                <!-- end sidebar     -->
                 </div>
-                <div id="content col-lg-9">
-                    <!-- All content goes here -->
+                <div id="content" class="col-lg-9">
+                <!-- All content goes below here -->
                     <div class="row top-buffer" id="salutation">
                         <div class="col-lg-8 offset-lg-2 green">
-                            <p id="p-salutation">Welcome to the job finder assistant dashboard.</p>
+                            <div class="jumbotron">
+                                <h1 class="display-4" id="dash-title">Dashboard</h1>
+                                <p class="lead">This is your personal dashboard.</p>
+                                <hr class="my-4">
+                                <p>The starting point for organizing your job search.</p>
+                                <p class="lead">
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div class="row top-buffer">
                         <div class="col-lg-8 offset-lg-2 green">
-                            <p>placeholder2</p>
+                            <table class="table table-striped">
+                                <thead class="thead-dark">
+                                    <tr>
+                                    <th scope="col">Job Listing</th>
+                                    <th scope="col">Job Description</th>
+                                    <th scope="col">Salary</th>
+                                    <th scope="col">Skills</th>
+                                    <th scope="col">View Job</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                    <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                    <th scope="row">3</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                    <td>@mdo</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                     <div class="row top-buffer">
                         <div class="col-lg-8 offset-lg-2 green">
-                            <p>placeholder3</p>
+                        <!-- submit form starts here -->
+                            <form>
+                                <div class="form-group">
+                                    <label for="job-url">Where did you find this job?</label>
+                                    <input type="url" class="form-control" id="job-url" aria-describedby="url-help" placeholder="Enter website URL">
+                                    <small id="url-help" class="form-text text-muted">The web address where you found this job posting.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cover-letter-file">Cover Letter</label>
+                                    <input type="file" class="form-control-file" id="cover-letter-file">
+                                </div>
+                                <div class="form-group">
+                                    <label for="resume-file">Resume</label>
+                                    <input type="file" class="form-control-file" id="resume-file">
+                                </div>
+                                <div class="form-group">
+                                    <label for="notes">Notes:</label>
+                                    <input type="text" class="form-control" id="notes" aria-describedby="notes-help" placeholder="Notes...">
+                                    <small id="notes-help" class="form-text text-muted">Add notes to help you remember this application.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="application-method">Example select</label>
+                                    <select class="form-control" id="application-method">
+                                        <option>Website posting</option>
+                                        <option>Recruiter contacted you</option>
+                                        <option>Personal Referral</option>
+                                        <option>Snail Mail</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="recruiter-yes-no">Example select</label>
+                                    <select class="form-control" id="recruiter-yes-no">
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                        <label for="recruiter-name">Staffing Agency</label>
+                                        <input type="url" class="form-control" id="recruiter-name" aria-describedby="url-help" placeholder="Enter staffing egency name">
+                                        <small id="url-help" class="form-text text-muted">The name of the staffing agency associated with this application.</small>
+                                    </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        <!-- submit form ends here -->
                         </div>
                     </div>
+                <!-- end content section -->
                 </div>
             </div>
         </div>
