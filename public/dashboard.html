@@ -13,21 +13,55 @@
     <title>Job Finder Assistant</title>
   </head>
   <body>
-        <header>
-            <div class="container">
-                <div class="row">
-                    <!-- <div class="wrap"> -->
-                        <div class="col-sm-4" id="logo-header-div">
-                            <img src="../public/images/fake-logo.png" alt="Failed to load logo" id ="logo-header">
-                        </div>
-                        <div class="col-sm-4">
-                            <h2 id="text-header">Header</h2>
-                        </div>
-                    <!-- </div> -->
+        <div id="wrapper-all">
+            <div class="row red-color">
+                <div class="col-lg-6" id="logo-header-div">
+                    <img src="../public/images/fake-logo.png" alt="Failed to load logo" id ="logo-header">
+                </div>
+                <div class="col-lg-6">
+                    <h2 id="text-header">Header</h2>
                 </div>
             </div>
-        </header>
         
+            <div class="row full-length">
+                <div class="col-lg-3 container-sidebar">
+                    <div class="row" id="sidebar-menu">
+                        <h3 class="menu-title">Menu</h3>
+                        <a href="#" class="sidebar-item">Link 1</a>
+                        <a href="#" class="sidebar-item">Link 2</a>
+                        <a href="#" class="sidebar-item">Link 3</a>
+                    </div>
+                    <br><br><br><br>
+                    <div class="row sidebar-career-info">
+                        <p>Career Info</p>
+                        <ul>
+                        <li>If you become a: Web Dev</li>
+                        <li>You will make: this many moneys</li>
+                        <li>You need education level: bootcamp</li>
+                    </ul>
+                    </div>
+                </div>
+                <div id="content col-lg-9">
+                    <!-- All content goes here -->
+                    <div class="row top-buffer" id="salutation">
+                        <div class="col-lg-8 offset-lg-2 green">
+                            <p id="p-salutation">Welcome to the job finder assistant dashboard.</p>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-lg-8 offset-lg-2 green">
+                            <p>placeholder2</p>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-lg-8 offset-lg-2 green">
+                            <p>placeholder3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         
 
     <!-- Optional JavaScript -->
@@ -35,5 +69,11 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        // var height = $("#content").height();
+        // $("#sidebar").height(height);
+
+
+    </script>
   </body>
 </html>
