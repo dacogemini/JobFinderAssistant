@@ -1,0 +1,124 @@
+body{
+  font-family: 'Nunito', sans-serif;
+  background-color:#5B2D9E;
+}
+#jobCatWrap{
+  width:990px;
+  margin: 0 auto;
+  position: relative;
+}
+#floatingGraphic1,
+#floatingGraphic2,
+#floatingGraphic3,
+#floatingGraphic4,
+#floatingGraphic5,
+#floatingGraphic6{
+  /* animation-duration: 3s;
+  animation-name: slidein; */
+  width:60px;
+  height: 60px;
+  display: block;
+  background-color: #777;
+  position: absolute;
+}
+#floatingGraphic1{
+  top: 30px;
+  left: 150px;
+}
+#floatingGraphic2{
+  top:100px;
+  left:50px;
+}
+#floatingGraphic3{
+  top:150px;
+  left:170px;
+}
+#floatingGraphic4{
+  top: 70px;
+  right: 140px;
+}
+#floatingGraphic5{
+
+  top:150px;
+  right:10px;
+}
+#floatingGraphic6{
+  top: 270px;
+  right: 120px;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+#catBranding{
+  width:456px;
+  height: auto;
+  margin: 0 auto;
+}
+#catLogo{
+  background-color:#777;
+  display: block;
+  height: 160px;
+  margin: 0 auto 10px 0;
+  width:456px;
+}
+#catLogo span{
+  display: none;
+}
+h1{
+  font-size: 32px;
+  margin:0;
+  padding: 0;
+  text-align: center;
+  color:#FFF;
+}
+h2{
+  font-size: 24px;
+  margin:0;
+  padding: 0;
+  text-align: center;
+  color:#FFF;
+}
+#btnWrap{
+      margin-top: 20px;
+}
+#loginLogoutBTN {
+  display: block;
+  margin: 0 auto;
+  background-color: #39E249;
+  border-radius: 10px;
+  box-shadow: 0 6px 0 #157C1A;
+  border: 5px solid #157C1A;
+  padding: 0 10px;
+  font-size: 30px;
+  color: #FFF;
+  width: 400px;
+  height: 100px;
+  text-transform: uppercase;
+  text-align: center;
+}
+#loginLogoutBTN:active{
+  box-shadow: 0 2px 0 #157C1A;
+  transform: translate(0, 4px);
+}
+#copyright{
+
+}
+#copyright p{
+  text-align: center;
+  color:#FFF;
+      margin: 20px 0 0 0;
+}
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
