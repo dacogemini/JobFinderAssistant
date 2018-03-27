@@ -1,6 +1,7 @@
 body {
     background-color: #e4e4e4;
     height: 100%;
+    font-family: 'Nunito', sans-serif;
     /* margin: 10px;
     padding: 0px; */
 }
@@ -31,7 +32,9 @@ header {
     width: 25%;
 }
 #logo-header {
-    width: 71%;
+    height: 75%;
+    margin-left: 10%;
+    margin-top: 5%;
 }
 #text-header {
     text-align: center;
@@ -79,7 +82,7 @@ p {
     width: 100%;
 } */
 .top-buffer {
-    margin-top: 3rem;
+    margin-top: 1.5rem;
 }
 
 

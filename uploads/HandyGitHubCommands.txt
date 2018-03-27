@@ -1,0 +1,22 @@
+standard push to git master after you navigate to the file:
+git init
+git add .
+git commit -m "type message here"
+git push -u origin master
+
+git checkout and pull when already on that branch
+git checkout master
+git pull
+
+Create a git branch
+git status  (to make sure you are on the branch you want to branch off from)
+git checkout -b nameOfNewBranch originalBranchToBranchOffFrom (-b creates the branch)
+
+
+
+
+Create a gitignore file that also adds node_modules/ to it:
+touch .gitignore && echo "node_modules/" >> .gitignore
+
+###Untested### Remove stuff from git because you forgot to add a gitignore file:
+git rm -r --cached node_modules && touch .gitignore && echo "node_modules/" >> .gitignore
