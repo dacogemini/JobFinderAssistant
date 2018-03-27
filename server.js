@@ -4,6 +4,9 @@ const app = express();
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
 
+/*Nick added a favicon*/
+const favicon = require('serve-favicon');
+app.use(favicon(path.join(__dirname, 'app/public', 'favicon.ico')));
 // Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -28,10 +31,10 @@ const mc = mysql.createConnection({
 })
 mc.connect();
 // =============================================================================
-// Retrieval 
+// Retrieval
 // =============================================================================
 
-// Retrieve full list 
+// Retrieve full list
 app.get('/list', function (req, res) {
     mc.query('SELECT * FROM jobs_db', function (error, results, fields) {
         if (error) throw error;
