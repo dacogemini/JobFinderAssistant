@@ -54,6 +54,10 @@ app.get('/dash', function(req, res){
   res.sendFile(path.join(__dirname, './public/dashboard.html'));
 });
 
+
+//======================
+//Begin File uploader
+//======================
 app.post('/upload', function(req, res){
     console.log("file uploaded!");
   // create an incoming form object
@@ -81,6 +85,10 @@ app.post('/upload', function(req, res){
   form.on('end', function() {
     res.end('success');
   });
+//======================
+//End File uploader
+//======================
+
 
   // parse the incoming request containing the form data
   form.parse(req);
