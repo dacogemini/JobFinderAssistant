@@ -6,7 +6,7 @@ CREATE DATABASE JobCat_db;
 USE JobCat_db;
 CREATE TABLE IF NOT EXISTS `JobCat_db` (
   `id` int(11) NOT NULL,
-  `job_listing` varchar(200) NOT NULL,
+  `category` varchar(200) NOT NULL,
   `description` varchar(200) NOT NULL,
   `salary` DECIMAL(65) NOT NULL,
   `skills` varchar(200) NOT NULL,
