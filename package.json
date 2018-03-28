@@ -1,17 +1,28 @@
 {
-  "name": "job",
+  "name": "jobfinder",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "group project to track job progress",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "Kent",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dacogemini/JobFinderAssistant.git"
+  },
+  "author": "Dan, Nick, Sarah, Kent",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dacogemini/JobFinderAssistant/issues"
+  },
+  "homepage": "https://github.com/dacogemini/JobFinderAssistant#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.3",
+    "mysql": "^2.15.0",
+    "serve-favicon": "^2.4.5",
     "file-uploader": "^1.0.0",
-    "formidable": "^1.2.1",
-    "mysql": "^2.15.0"
+    "formidable": "^1.2.1"
   }
 }

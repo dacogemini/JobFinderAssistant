@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Dependencies
 const express = require('express');
 const app = express();
@@ -6,6 +7,20 @@ const mysql = require('mysql');
 var path = require('path');
 var formidable = require('formidable');
 var fs = require('fs');
+=======
+const express = require('express');
+var exphbs  = require('express-handlebars');
+const app = express();
+
+const bodyParser = require('body-parser');
+const mysql = require('mysql');
+
+var Job = require('./models/jobs.js');
+
+/*Nick added a favicon*/
+const favicon = require('serve-favicon');
+app.use(favicon(path.join(__dirname, 'app/public', 'favicon.ico')));
+>>>>>>> 00f639868b219455121376d3be6003b6b2ed8809
 
 // Middleware
 app.use(bodyParser.json());
@@ -13,6 +28,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
+<<<<<<< HEAD
 // Default route
 app.get('/', function (req, res) {
     return res.send({
@@ -90,3 +106,23 @@ app.post('/upload', function(req, res){
 app.listen(8080, function () {
     console.log('Node app is running on port 8080');
 });
+=======
+app.engine('handlebars', exphbs({
+    defaultLayout: 'main'
+}));
+app.set('view engine', 'handlebars');
+
+// Require connection 
+var connection = require("./config/connection.js");
+
+// Import routes and give the server access to them.
+var routes = require("./controllers/JobsContoller.js");
+app.use(routes);
+
+
+// port must be set to 8080 because incoming http requests are routed from port 80 to port 8080
+app.listen(8080, function () {
+    console.log('Node app is running on port 8080...');
+});
+
+>>>>>>> 00f639868b219455121376d3be6003b6b2ed8809
