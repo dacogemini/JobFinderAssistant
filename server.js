@@ -38,7 +38,7 @@ app.set('view engine', 'handlebars');
 // const mc = mysql.createConnection({
 //     host: 'localhost',
 //     user: 'root',
-//     password: '2003Sv650',
+//     password: '',
 //     database: 'jobs_db'
 // })
 // mc.connect();
