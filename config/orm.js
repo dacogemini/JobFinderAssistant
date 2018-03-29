@@ -6,7 +6,7 @@ var connection = require("../config/connection.js");
 // In order to write the query, we need 3 question marks.
 // The above helper function loops through and creates an array of question marks - ["?", "?", "?"] - and turns it into a string.
 // ["?", "?", "?"].toString() => "?,?,?";
-function printQuestionMarks(num) {
+var printQuestionMarks = function(num) {
   var arr = [];
 
   for (var i = 0; i < num; i++) {
@@ -17,7 +17,7 @@ function printQuestionMarks(num) {
 }
 
 // Helper function to convert object key/value pairs to SQL syntax
-function objToSql(ob) {
+var objToSql = function(ob) {
   var arr = [];
 
   // loop through the keys and push the key/value as a string int arr
@@ -111,5 +111,7 @@ var orm = {
   }
 };
 
-// Export the orm object for the model (cat.js).
+// Export the orm and test cases object for the model
 module.exports = orm;
+module.exports = printQuestionMarks;
+module.exports = objToSql;
