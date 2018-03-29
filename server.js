@@ -1,18 +1,15 @@
-// Dependencies
 const express = require('express');
 var exphbs  = require('express-handlebars');
 const app = express();
+
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
-var path = require('path');
-var formidable = require('formidable');
-var fs = require('fs');
 
 var Job = require('./models/jobs.js');
 
 /*Nick added a favicon*/
-const favicon = require('serve-favicon');
-app.use(favicon(path.join(__dirname, '/public', 'favicon.ico')));
+// const favicon = require('serve-favicon');
+// app.use(favicon(path.join(__dirname, 'app/public', 'favicon.ico')));
 
 // Middleware
 app.use(bodyParser.json());
@@ -20,93 +17,29 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-app.engine('handlebars', exphbs({
+app.set('views', './views'); // Set location to look for views
+app.set('view engine', 'pug'); // Specify default app engine
+
+app.use(express.static("public"));
+// app.use(express.static(__dirname + '/public'));
+
+app.use(express.static("node_modules/bootstrap/dist"));
+
+/* app.engine('handlebars', exphbs({
     defaultLayout: 'main'
 }));
-app.set('view engine', 'handlebars');
-
-// Default route
-// app.get('/', function (req, res) {
-//     return res.send({
-//         error: true,
-//         message: 'Home'
-//     })
-// });
-
-// =============================================================================
-// mysql connection
-// =============================================================================
-// const mc = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     password: '',
-//     database: 'jobs_db'
-// })
-// mc.connect();
+app.set('view engine', 'handlebars'); */
 
 // Require connection 
 var connection = require("./config/connection.js");
-// =============================================================================
-// Retrieval 
-// =============================================================================
 
+// Import routes and give the server access to them.
 var routes = require("./controllers/JobsContoller.js");
 app.use(routes);
 
-// Retrieve full list 
-// app.get('/list', function (req, res) {
-//     connection.query('SELECT * FROM Job_Cat_db', function (error, results, fields) {
-//         if (error) throw error;
-//         return res.send({
-//             error: false,
-//             data: results,
-//             message: 'Jobs list: '
-//         });
 
-//     })
-// });
-
-
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.get('/dash', function(req, res){
-  res.sendFile(path.join(__dirname, './public/dashboard.html'));
-});
-
-app.post('/upload', function(req, res){
-    console.log("file uploaded!");
-  // create an incoming form object
-  var form = new formidable.IncomingForm();
-
-  // specify that we want to allow the user to upload multiple files in a single request
-  form.multiples = true;
-
-  // store all uploads in the /uploads directory
-  form.uploadDir = path.join(__dirname, '/uploads');
-
-  // every time a file has been uploaded successfully,
-  // rename it to it's orignal name
-  form.on('file', function(field, file) {
-    fs.rename(file.path, path.join(form.uploadDir, file.name));
-    console.log("file uploaded!");
-  });
-
-  // log any errors that occur
-  form.on('error', function(err) {
-    console.log('An error has occured: \n' + err);
-  });
-
-  // once all the files have been uploaded, send a response to the client
-  form.on('end', function() {
-    res.end('success');
-  });
-
-  // parse the incoming request containing the form data
-  form.parse(req);
-
-});
-
+// port must be set to 8080 because incoming http requests are routed from port 80 to port 8080
 app.listen(8080, function () {
-    console.log('Node app is running on port 8080');
+    console.log('Node app is running on port 8080...');
 });
 
