@@ -111,7 +111,8 @@ var orm = {
   }
 };
 
+
 // Export the orm and test cases object for the model
 module.exports = orm;
-module.exports = printQuestionMarks;
-module.exports = objToSql;
+//module.exports = printQuestionMarks;
+//module.exports = objToSql;

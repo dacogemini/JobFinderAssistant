@@ -27,3 +27,5 @@ var cat = {
 
 // Export the database functions for the controller (catsController.js).
 module.exports = cat;
+
+//console.log("from jobs.js !!!!  " + orm.all);
