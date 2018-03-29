@@ -1,0 +1,39 @@
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  // Bootstrap CSS
+  link(href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+  link(rel='stylesheet' href='../public/css/dashboard.css')
+  script(src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous')
+  title Job Finder Assistant
+body
+#wrapper-all
+  .row.purple-color
+    // header content starts here
+    #logo-header-div.col-lg-3
+      img#logo-header(src='../public/images/cat1.png' alt='Failed to load logo')
+    .col-lg-6
+      h2#text-header.white-text JobCat.Careers
+    // header ends here
+  .row.full-length
+    .col-lg-2.container-sidebar
+      // sidebar content here
+      .row.sidebar-user-info
+        .row
+          p.white-text User Info
+          img#user-photo(src='./images/userPhoto1.png' alt='Use photo failed to load')
+        .row.career-info-list
+          ul
+            li.white-text User name here
+            li.white-text Member since
+            li.white-text Jobs Applied: 2,564,231
+      br
+      br
+      #sidebar-menu.row
+        h3.menu-title.white-text Menu
+        button.sidebar-item.btn.btn-light(type='button' href='#') Link 1
+        button.sidebar-item.btn.btn-light(type='button' href='#') Link 2
+        button.sidebar-item.btn.btn-light(type='button' href='#') Link 3
+block content
