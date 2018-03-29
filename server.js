@@ -11,8 +11,8 @@ var fs = require('fs');
 var Job = require('./models/jobs.js');
 
 /*Nick added a favicon*/
-// const favicon = require('serve-favicon');
-// app.use(favicon(path.join(__dirname, 'app/public', 'favicon.ico')));
+const favicon = require('serve-favicon');
+app.use(favicon(path.join(__dirname, '/public', 'favicon.ico')));
 
 // Middleware
 app.use(bodyParser.json());
@@ -32,6 +32,7 @@ app.set('view engine', 'handlebars');
 //         message: 'Home'
 //     })
 // });
+
 // =============================================================================
 // mysql connection
 // =============================================================================
@@ -53,17 +54,17 @@ var routes = require("./controllers/JobsContoller.js");
 app.use(routes);
 
 // Retrieve full list 
-app.get('/list', function (req, res) {
-    mc.query('SELECT * FROM jobs_db', function (error, results, fields) {
-        if (error) throw error;
-        return res.send({
-            error: false,
-            data: results,
-            message: 'Jobs list: '
-        });
+// app.get('/list', function (req, res) {
+//     connection.query('SELECT * FROM Job_Cat_db', function (error, results, fields) {
+//         if (error) throw error;
+//         return res.send({
+//             error: false,
+//             data: results,
+//             message: 'Jobs list: '
+//         });
 
-    })
-});
+//     })
+// });
 
 
 app.use(express.static(path.join(__dirname, 'public')));
