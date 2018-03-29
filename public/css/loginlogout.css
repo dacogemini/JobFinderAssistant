@@ -146,6 +146,38 @@ h2{
   margin: 20px 0 0 0;
   font-size:11px;
 }
+.superBTN{
+  font-family: 'Nunito', sans-serif;
+  display: block;
+  margin: 0 auto 22px auto;
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 6px 0 #DDD;
+  border: 5px solid #DDD;
+  padding: 0;
+  font-size: 24px;
+  color: #9734D5;
+  width: 900px;
+  height: 102px;
+  text-transform: uppercase;
+  text-align: left;
+  text-decoration: none;
+}
+.superBTN span{
+  padding:38px 0 0 30px;
+  float:left;
+}
+.check{
+  float: right;
+  display: inline-block;
+  border-left: 2px solid #DDD;
+  width: 120px;
+  background: url("../img/graycheck.png") center center no-repeat;
+  height: 102px;
+}
+.superBTN:hover .check{
+  background: #3FD955 url("../img/whitecheck.png") center center no-repeat;
+}
 .clearfix::after {
   content: '';
   display: table;
