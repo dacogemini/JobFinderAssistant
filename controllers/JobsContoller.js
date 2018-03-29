@@ -4,7 +4,6 @@
 
 // Default route
 var express = require("express");
-
 var router = express.Router();
 
 // Import the model (cat.js) to use its database functions.
@@ -16,14 +15,14 @@ router.get("/", function (req, res) {
         var hbsObject = {
             jobs: data // (jobs) match hbs 
         };
-        console.log(hbsObject);
+        console.log(hbsObject); // logs database
         res.render("index", hbsObject); // match index.hbs
     });
 });
 router.post("/api/job", function (req, res) {
-    jobs.create([  //*  cols, vals, cb
-        "category", 
-        "company", 
+    jobs.create([ //*  cols, vals, cb
+        "category",
+        "company",
         "description",
         "salary",
         "skills"
