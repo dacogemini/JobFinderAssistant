@@ -33,6 +33,16 @@ app.set('view engine', 'handlebars');
 //     })
 // });
 
+// =============================================================================
+// mysql connection
+// =============================================================================
+// const mc = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: '',
+//     database: 'jobs_db'
+// })
+// mc.connect();
 
 // Require connection 
 var connection = require("./config/connection.js");
