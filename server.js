@@ -11,8 +11,8 @@ var fs = require('fs');
 var Job = require('./models/jobs.js');
 
 /*Nick added a favicon*/
-const favicon = require('serve-favicon');
-app.use(favicon(path.join(__dirname, 'app/public', 'favicon.ico')));
+// const favicon = require('serve-favicon');
+// app.use(favicon(path.join(__dirname, 'app/public', 'favicon.ico')));
 
 // Middleware
 app.use(bodyParser.json());
@@ -26,12 +26,12 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars');
 
 // Default route
-app.get('/', function (req, res) {
-    return res.send({
-        error: true,
-        message: 'Home'
-    })
-});
+// app.get('/', function (req, res) {
+//     return res.send({
+//         error: true,
+//         message: 'Home'
+//     })
+// });
 // =============================================================================
 // mysql connection
 // =============================================================================
