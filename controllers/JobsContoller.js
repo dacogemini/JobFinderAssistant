@@ -25,8 +25,22 @@ router.get("/dashboard", function (req, res) {
         var hbsObject = {
             jobs: data // (jobs) match hbs 
         };
-        console.log(hbsObject); // logs database
-        res.render("dashboard", hbsObject); // match index.hbs
+        console.log(hbsObject.jobs[1].job_listing); // logs database
+        res.render(
+            "dashboard", 
+            {
+                jobNameFirst: hbsObject.jobs[0].job_listing,
+                salaryFirst: "$" + hbsObject.jobs[0].salary + "K per year",
+                skillsFirst: hbsObject.jobs[0].skills,
+
+                jobNameSecond: hbsObject.jobs[1].job_listing,
+                salarySecond: "$" + hbsObject.jobs[1].salary + "K per year",
+                skillsSecond: hbsObject.jobs[1].skills,
+
+                jobNameThird: hbsObject.jobs[2].job_listing,
+                salaryThird: "$" + hbsObject.jobs[2].salary + "K per year",
+                skillsThird: hbsObject.jobs[2].skills
+            }); // match index.hbs !!!old var = hbsObject
     });
 });
 

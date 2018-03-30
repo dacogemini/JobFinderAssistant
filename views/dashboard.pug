@@ -2,7 +2,7 @@ extends topAndSideBars
 
 block content
         .container
-            .row.top-buffer
+            .row.top-buffer.top-card
                 #content.col-lg-9
                     #salutation.row.top-buffer
                         .col-lg-8.offset-lg-2
@@ -24,22 +24,22 @@ block content
                             tbody
                                 tr
                                     th(scope='row') 1
-                                    td Mark
-                                    td Otto
-                                    td @mdo
-                                    td @mdo
+                                    td.name-1= jobNameFirst
+                                    td.salary-1= salaryFirst
+                                    td.skills-1= skillsFirst
+                                    td.link-1 view
                                 tr
                                     th(scope='row') 2
-                                    td Jacob
-                                    td Thornton
-                                    td @fat
-                                    td @mdo
+                                    td.name-2= jobNameSecond
+                                    td.salary-2= salarySecond
+                                    td.skills-2= skillsSecond
+                                    td.link-2 view
                                 tr
                                     th(scope='row') 3
-                                    td Larry
-                                    td the Bird
-                                    td @twitter
-                                    td @mdo
+                                    td.name-3= jobNameThird
+                                    td.salary-3= salaryThird
+                                    td.skills-3= skillsThird
+                                    td.link-3 view
             .row.top-buffer
                 .col-lg-8.offset-lg-2.green
                   form
@@ -56,9 +56,9 @@ block content
                           label(for='resume-file') Resume
                           input#resume-file.form-control-file(type='file')
                         .form-group
-                          label(for='notes') Notes:
-                          input#notes.form-control(type='text' aria-describedby='notes-help' placeholder='Notes...')
-                          small#notes-help.form-text.text-muted Add notes to help you remember this application.
+                          label(for='name') Company Name:
+                          input#name.form-control(type='text' aria-describedby='notes-help' placeholder='Company Name')
+                          small#name-help.form-text.text-muted Add the name of the company you applied to.
                       .col-lg-6
                         .form-group
                           label(for='application-method') Example select
@@ -77,4 +77,5 @@ block content
                             input#recruiter-name.form-control(type='url' aria-describedby='url-help' placeholder='Enter staffing agency name')
                             small#url-help.form-text.text-muted The name of the staffing agency associated with this application.
                         button#submit1-button.btn.btn-primary(type='button') Submit
-                  
+        script 
+        include ../public/js/dashboard.js
