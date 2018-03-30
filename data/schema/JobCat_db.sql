@@ -2,13 +2,15 @@
 -- 
 -- Table structure for `JobCat`
 -- 
+drop database if exists JobCat_db;
+
 CREATE DATABASE JobCat_db;
 USE JobCat_db;
 CREATE TABLE IF NOT EXISTS `JobCat_db` (
   `id` int(11) NOT NULL,
   `category` varchar(200) NOT NULL,
   `description` varchar(200) NOT NULL,
-  `salary` DECIMAL(65) NOT NULL,
+  `salary` DECIMAL(65,2) NOT NULL,
   `skills` varchar(200) NOT NULL,
   `interesting_facts` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

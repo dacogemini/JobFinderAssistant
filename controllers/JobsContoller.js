@@ -25,19 +25,19 @@ router.get("/dashboard", function (req, res) {
         var hbsObject = {
             jobs: data // (jobs) match hbs 
         };
-        console.log(hbsObject.jobs[1].job_listing); // logs database
+        console.log(hbsObject.jobs[1]); // logs database
         res.render(
             "dashboard", 
             {
-                jobNameFirst: hbsObject.jobs[0].job_listing,
+                jobNameFirst: hbsObject.jobs[0].category,
                 salaryFirst: "$" + hbsObject.jobs[0].salary + "K per year",
                 skillsFirst: hbsObject.jobs[0].skills,
 
-                jobNameSecond: hbsObject.jobs[1].job_listing,
+                jobNameSecond: hbsObject.jobs[1].category,
                 salarySecond: "$" + hbsObject.jobs[1].salary + "K per year",
                 skillsSecond: hbsObject.jobs[1].skills,
 
-                jobNameThird: hbsObject.jobs[2].job_listing,
+                jobNameThird: hbsObject.jobs[2].category,
                 salaryThird: "$" + hbsObject.jobs[2].salary + "K per year",
                 skillsThird: hbsObject.jobs[2].skills
             }); // match index.hbs !!!old var = hbsObject

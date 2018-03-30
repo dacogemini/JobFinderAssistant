@@ -13,11 +13,13 @@ const connection = mysql.createConnection({
 // Make connection.
 connection.connect(function(err) {
     if (err) {
-      console.error("error connecting: " + err.stack);
+      console.error("JobCat_db error connecting: " + err.stack);
       return;
     }
-    console.log("connected as id " + connection.threadId);
+    console.log("JobCat_db connected as id " + connection.threadId);
   });
   
   // Export connection for our ORM to use.
   module.exports = connection;
+
+  

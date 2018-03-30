@@ -1,81 +1,79 @@
 extends topAndSideBars
 
 block content
-        .container
-            .row.top-buffer.top-card
-                #content.col-lg-9
-                    #salutation.row.top-buffer
-                        .col-lg-8.offset-lg-2
-                            .card
-                                .card-body
-                                    h4#dash-title.card-title This is your personal dashboard.
-                                    hr.my-4
-                                    p.card-text The starting point for organizing your job search.
-            .row.top-buffer
-                .col-lg-8.offset-lg-2
-                    table.table.table-striped
-                        thead.thead-dark
-                            tr
-                            th(scope='col') Job Listing
-                                th(scope='col') Job Description
-                                th(scope='col') Salary
-                                th(scope='col') Skills
-                                th(scope='col') View Job
-                            tbody
-                                tr
-                                    th(scope='row') 1
-                                    td.name-1= jobNameFirst
-                                    td.salary-1= salaryFirst
-                                    td.skills-1= skillsFirst
-                                    td.link-1 view
-                                tr
-                                    th(scope='row') 2
-                                    td.name-2= jobNameSecond
-                                    td.salary-2= salarySecond
-                                    td.skills-2= skillsSecond
-                                    td.link-2 view
-                                tr
-                                    th(scope='row') 3
-                                    td.name-3= jobNameThird
-                                    td.salary-3= salaryThird
-                                    td.skills-3= skillsThird
-                                    td.link-3 view
-            .row.top-buffer
-                .col-lg-8.offset-lg-2.green
-                  form
-                    .row
-                      .col-lg-6
-                        .form-group
-                          label(for='job-url') Where did you find this job?
-                          input#job-url.form-control(type='url' aria-describedby='url-help' placeholder='Enter website URL')
-                          small#url-help.form-text.text-muted The web address where you found this job posting.
-                        .form-group
-                          label(for='cover-letter-file') Cover Letter
-                          input#cover-letter-file.form-control-file(type='file')
-                        .form-group
-                          label(for='resume-file') Resume
-                          input#resume-file.form-control-file(type='file')
-                        .form-group
-                          label(for='name') Company Name:
-                          input#name.form-control(type='text' aria-describedby='notes-help' placeholder='Company Name')
-                          small#name-help.form-text.text-muted Add the name of the company you applied to.
-                      .col-lg-6
-                        .form-group
-                          label(for='application-method') Example select
-                          select#application-method.form-control
-                            option Website posting
-                            option Recruiter contacted you
-                            option Personal Referral
-                            option Snail Mail
-                        .form-group
-                          label(for='recruiter-yes-no') Example select
-                          select#recruiter-yes-no.form-control
-                            option Yes
-                            option No
-                        .form-group
-                            label(for='recruiter-name') Staffing Agency
-                            input#recruiter-name.form-control(type='url' aria-describedby='url-help' placeholder='Enter staffing agency name')
-                            small#url-help.form-text.text-muted The name of the staffing agency associated with this application.
-                        button#submit1-button.btn.btn-primary(type='button') Submit
+        .container.wide-container
+          .row.top-buffer.top-card
+            .col-lg-12
+                .card
+                    .card-body
+                        h4#dash-title.card-title This is your personal dashboard.
+                        hr.my-4
+                        p.card-text The starting point for organizing your job search.
+          .row.top-buffer
+              .col-lg-12
+                  table.table.table-striped
+                      thead.thead-dark
+                          tr
+                          th(scope='col') Job Listing
+                              th(scope='col') Job Description
+                              th(scope='col') Salary
+                              th(scope='col') Skills
+                              th(scope='col') View Job
+                          tbody
+                              tr
+                                  th(scope='row') 1
+                                  td.name-1= jobNameFirst
+                                  td.salary-1= salaryFirst
+                                  td.skills-1= skillsFirst
+                                  td.link-1 view
+                              tr
+                                  th(scope='row') 2
+                                  td.name-2= jobNameSecond
+                                  td.salary-2= salarySecond
+                                  td.skills-2= skillsSecond
+                                  td.link-2 view
+                              tr
+                                  th(scope='row') 3
+                                  td.name-3= jobNameThird
+                                  td.salary-3= salaryThird
+                                  td.skills-3= skillsThird
+                                  td.link-3 view
+          .row.top-buffer
+              .col-lg-12
+                form
+                  .row
+                    .col-lg-6
+                      .form-group
+                        label(for='job-url') Where did you find this job?
+                        input#job-url.form-control(type='url' aria-describedby='url-help' placeholder='Enter website URL')
+                        small#url-help.form-text.text-muted The web address where you found this job posting.
+                      .form-group
+                        label(for='cover-letter-file') Cover Letter
+                        input#cover-letter-file.form-control-file(type='file')
+                      .form-group
+                        label(for='resume-file') Resume
+                        input#resume-file.form-control-file(type='file')
+                      .form-group
+                        label(for='name') Company Name:
+                        input#name.form-control(type='text' aria-describedby='notes-help' placeholder='Company Name')
+                        small#name-help.form-text.text-muted Add the name of the company you applied to.
+                    .col-lg-6
+                      .form-group
+                        label(for='application-method') Example select
+                        select#application-method.form-control
+                          option Website posting
+                          option Recruiter contacted you
+                          option Personal Referral
+                          option Snail Mail
+                      .form-group
+                        label(for='recruiter-yes-no') Example select
+                        select#recruiter-yes-no.form-control
+                          option Yes
+                          option No
+                      .form-group
+                          label(for='recruiter-name') Staffing Agency
+                          input#recruiter-name.form-control(type='url' aria-describedby='url-help' placeholder='Enter staffing agency name')
+                          small#url-help.form-text.text-muted The name of the staffing agency associated with this application.
+                      button#submit1-button.btn.btn-primary(type='button') Submit
         script 
-        include ../public/js/dashboard.js
+          include ../public/js/dashboard.js
