@@ -1,17 +1,18 @@
 extends topAndSideBars
 
 block content
+        .container
             .row.top-buffer
                 #content.col-lg-9
                     #salutation.row.top-buffer
-                        .col-lg-8.offset-lg-2.green
+                        .col-lg-8.offset-lg-2
                             .card
                                 .card-body
                                     h4#dash-title.card-title This is your personal dashboard.
                                     hr.my-4
                                     p.card-text The starting point for organizing your job search.
             .row.top-buffer
-                .col-lg-8.offset-lg-2.green
+                .col-lg-8.offset-lg-2
                     table.table.table-striped
                         thead.thead-dark
                             tr
@@ -73,7 +74,7 @@ block content
                             option No
                         .form-group
                             label(for='recruiter-name') Staffing Agency
-                            input#recruiter-name.form-control(type='url' aria-describedby='url-help' placeholder='Enter staffing egency name')
+                            input#recruiter-name.form-control(type='url' aria-describedby='url-help' placeholder='Enter staffing agency name')
                             small#url-help.form-text.text-muted The name of the staffing agency associated with this application.
                         button#submit1-button.btn.btn-primary(type='button') Submit
                   
