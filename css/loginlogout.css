@@ -1,0 +1,184 @@
+html {
+  height: 100%;
+}
+body{
+font-family: 'Nunito', sans-serif;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5706a8+1,9734d5+70,9734d5+70 */
+background: #5706a8; /* Old browsers */
+background: -moz-linear-gradient(top, #5706a8 1%, #9734d5 70%, #9734d5 70%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #5706a8 1%,#9734d5 70%,#9734d5 70%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #5706a8 1%,#9734d5 70%,#9734d5 70%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5706a8', endColorstr='#9734d5',GradientType=0 ); /* IE6-9 */
+height: 100%;
+margin: 0;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+#jobCatWrap{
+width:100%;
+height:100%;
+}
+#jobCatContainer{
+width:990px;
+margin: 0 auto;
+position: relative;
+padding: 70px 0 0 0;
+}
+#floatingGraphic1,
+#floatingGraphic2,
+#floatingGraphic3,
+#floatingGraphic4,
+#floatingGraphic5,
+#floatingGraphic6{
+width:60px;
+height: 60px;
+display: block;
+background-color: #777;
+position: absolute;
+}
+#floatingGraphic1{
+top: 30px;
+left: 150px;
+animation: slidein 5s linear infinite;
+background-image: url("../img/bob.png");
+}
+#floatingGraphic2{
+top:100px;
+left:50px;
+animation: slightRotate 6s linear infinite;
+}
+#floatingGraphic3{
+top:150px;
+left:170px;
+animation: slightRotate 7s linear infinite;
+}
+#floatingGraphic4{
+top: 70px;
+right: 140px;
+animation: slightRotate 3s linear infinite;
+}
+#floatingGraphic5{
+animation: slightRotate 6s linear infinite;
+top:150px;
+right:10px;
+}
+#floatingGraphic6{
+animation: bottomSlide 3s linear infinite;
+top: 250px;
+right: 160px;
+}
+@keyframes slidein {
+0%   {margin-left:0% }
+25% { margin-left:2%}
+50% { margin-left:-2%}
+100% { margin-left:0% }
+}
+@keyframes bottomSlide {
+0%   {margin-right:0% }
+25% { margin-right:2%}
+50% { margin-right:-2%}
+100% { margin-right:0% }
+}
+@keyframes slightRotate {
+0%   { transform: rotate(0deg); }
+25% { transform: rotate(10deg); }
+50% { transform: rotate(-10deg); }
+100% { transform: rotate(0deg); }
+}
+
+#catBranding{
+width:480px;
+height: auto;
+margin: 0 auto;
+}
+#catLogo{
+height: 44px;
+margin: 50px  auto 20px auto;
+width:194px;
+background: url("../img/logo.png") center top no-repeat;
+}
+#catLogo span{
+display: none;
+}
+h1{
+font-size: 32px;
+margin: 0 0 10px 0;
+padding: 0;
+text-align: center;
+color:#FFF;
+}
+h2{
+font-size: 24px;
+margin:0;
+padding: 0;
+text-align: center;
+color:#FFF;
+}
+#btnWrap{
+    margin-top: 40px;
+}
+#loginLogoutBTN {
+font-family: 'Nunito', sans-serif;
+display: block;
+margin: 0 auto;
+background-color: #39E249;
+border-radius: 10px;
+box-shadow: 0 6px 0 #157C1A;
+border: 5px solid #157C1A;
+padding: 4px 0 0 0;
+font-size: 34px;
+color: #FFF;
+width: 300px;
+height: 60px;
+text-transform: uppercase;
+text-align: center;
+text-decoration: none;
+}
+#loginLogoutBTN:active{
+box-shadow: 0 2px 0 #157C1A;
+transform: translate(0, 4px);
+}
+
+#copyright p{
+text-align: center;
+color:#FFF;
+margin: 20px 0 0 0;
+font-size:11px;
+}
+.superBTN{
+font-family: 'Nunito', sans-serif;
+display: block;
+margin: 0 auto 22px auto;
+background-color: #FFF;
+border-radius: 10px;
+box-shadow: 0 6px 0 #DDD;
+border: 5px solid #DDD;
+padding: 0;
+font-size: 24px;
+color: #9734D5;
+width: 900px;
+height: 102px;
+text-transform: uppercase;
+text-align: left;
+text-decoration: none;
+}
+.superBTN span{
+padding:38px 0 0 30px;
+float:left;
+}
+.check{
+display: inline-block;
+border-left: 2px solid #DDD;
+width: 120px;
+background: url("../img/graycheck.png") center center no-repeat;
+height: 102px;
+border-radius: 0 5px 5px 0;
+}
+.superBTN:hover .check{
+background: #3FD955 url("../img/whitecheck.png") center center no-repeat;
+}
+.clearfix::after {
+content: '';
+display: table;
+clear: both;
+}
