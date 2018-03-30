@@ -1,80 +1,79 @@
 extends topAndSideBars
 
 block content
-    #content.col-lg-9
-    // All content goes below here
-    #salutation.row.top-buffer
-      .col-lg-8.offset-lg-2.green
-        .card
-          .card-body
-            h4#dash-title.card-title This is your personal dashboard.
-            hr.my-4
-            p.card-text The starting point for organizing your job search.
-    .row.top-buffer
-      .col-lg-8.offset-lg-2.green
-        table.table.table-striped
-          thead.thead-dark
-            tr
-              th(scope='col') Job Listing
-              th(scope='col') Job Description
-              th(scope='col') Salary
-              th(scope='col') Skills
-              th(scope='col') View Job
-        tbody
-          tr
-            th(scope='row') 1
-            td Mark
-            td Otto
-            td @mdo
-            td @mdo
-          tr
-            th(scope='row') 2
-            td Jacob
-            td Thornton
-            td @fat
-            td @mdo
-          tr
-            th(scope='row') 3
-            td Larry
-            td the Bird
-            td @twitter
-            td @mdo
-    .row.top-buffer
-    .col-lg-8.offset-lg-2.green
-      // submit form starts here
-      form
-        .row
-          .col-lg-6
-            .form-group
-              label(for='job-url') Where did you find this job?
-              input#job-url.form-control(type='url' aria-describedby='url-help' placeholder='Enter website URL')
-              small#url-help.form-text.text-muted The web address where you found this job posting.
-            .form-group
-              label(for='cover-letter-file') Cover Letter
-              input#cover-letter-file.form-control-file(type='file')
-            .form-group
-              label(for='resume-file') Resume
-              input#resume-file.form-control-file(type='file')
-            .form-group
-              label(for='notes') Notes:
-              input#notes.form-control(type='text' aria-describedby='notes-help' placeholder='Notes...')
-              small#notes-help.form-text.text-muted Add notes to help you remember this application.
-          .col-lg-6
-            .form-group
-              label(for='application-method') Example select
-              select#application-method.form-control
-                option Website posting
-                option Recruiter contacted you
-                option Personal Referral
-                option Snail Mail
-            .form-group
-              label(for='recruiter-yes-no') Example select
-              select#recruiter-yes-no.form-control
-                option Yes
-                option No
-            .form-group
-              label(for='recruiter-name') Staffing Agency
-              input#recruiter-name.form-control(type='url' aria-describedby='url-help' placeholder='Enter staffing egency name')
-              small#url-help.form-text.text-muted The name of the staffing agency associated with this application.
-            button#submit1-button.btn.btn-primary(type='button') Submit
-      // submit form ends here
+            .row.top-buffer
+                #content.col-lg-9
+                    #salutation.row.top-buffer
+                        .col-lg-8.offset-lg-2.green
+                            .card
+                                .card-body
+                                    h4#dash-title.card-title This is your personal dashboard.
+                                    hr.my-4
+                                    p.card-text The starting point for organizing your job search.
+            .row.top-buffer
+                .col-lg-8.offset-lg-2.green
+                    table.table.table-striped
+                        thead.thead-dark
+                            tr
+                            th(scope='col') Job Listing
+                                th(scope='col') Job Description
+                                th(scope='col') Salary
+                                th(scope='col') Skills
+                                th(scope='col') View Job
+                            tbody
+                                tr
+                                    th(scope='row') 1
+                                    td Mark
+                                    td Otto
+                                    td @mdo
+                                    td @mdo
+                                tr
+                                    th(scope='row') 2
+                                    td Jacob
+                                    td Thornton
+                                    td @fat
+                                    td @mdo
+                                tr
+                                    th(scope='row') 3
+                                    td Larry
+                                    td the Bird
+                                    td @twitter
+                                    td @mdo
+            .row.top-buffer
+                .col-lg-8.offset-lg-2.green
+                  form
+                    .row
+                      .col-lg-6
+                        .form-group
+                          label(for='job-url') Where did you find this job?
+                          input#job-url.form-control(type='url' aria-describedby='url-help' placeholder='Enter website URL')
+                          small#url-help.form-text.text-muted The web address where you found this job posting.
+                        .form-group
+                          label(for='cover-letter-file') Cover Letter
+                          input#cover-letter-file.form-control-file(type='file')
+                        .form-group
+                          label(for='resume-file') Resume
+                          input#resume-file.form-control-file(type='file')
+                        .form-group
+                          label(for='notes') Notes:
+                          input#notes.form-control(type='text' aria-describedby='notes-help' placeholder='Notes...')
+                          small#notes-help.form-text.text-muted Add notes to help you remember this application.
+                      .col-lg-6
+                        .form-group
+                          label(for='application-method') Example select
+                          select#application-method.form-control
+                            option Website posting
+                            option Recruiter contacted you
+                            option Personal Referral
+                            option Snail Mail
+                        .form-group
+                          label(for='recruiter-yes-no') Example select
+                          select#recruiter-yes-no.form-control
+                            option Yes
+                            option No
+                        .form-group
+                            label(for='recruiter-name') Staffing Agency
+                            input#recruiter-name.form-control(type='url' aria-describedby='url-help' placeholder='Enter staffing egency name')
+                            small#url-help.form-text.text-muted The name of the staffing agency associated with this application.
+                        button#submit1-button.btn.btn-primary(type='button') Submit
+                  
