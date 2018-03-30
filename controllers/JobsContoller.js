@@ -19,6 +19,21 @@ router.get("/", function (req, res) {
         res.render("index", hbsObject); // match index.hbs
     });
 });
+
+router.get("/dashboard", function (req, res) {
+    jobs.all(function (data) { // (jobs) match hbs 
+        var hbsObject = {
+            jobs: data // (jobs) match hbs 
+        };
+        console.log(hbsObject); // logs database
+        res.render("dashboard", hbsObject); // match index.hbs
+    });
+});
+
+
+
+
+
 router.post("/api/job", function (req, res) {
     jobs.create([ //*  cols, vals, cb
         "category",
