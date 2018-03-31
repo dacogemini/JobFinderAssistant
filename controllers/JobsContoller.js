@@ -44,11 +44,8 @@ router.get("/dashboard", function (req, res) {
     });
 });
 
-
-
-
-
 router.post("/api/job", function (req, res) {
+    console.log("received ajax !!!  " + req);
     jobs.create([ //*  cols, vals, cb
         "category",
         "company",
