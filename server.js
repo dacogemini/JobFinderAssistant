@@ -1,7 +1,7 @@
 const express = require('express');
 var exphbs  = require('express-handlebars');
 const app = express();
-
+var port = process.env.PORT || 3000;
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
 
@@ -39,7 +39,7 @@ app.use(routes);
 
 
 // port must be set to 8080 because incoming http requests are routed from port 80 to port 8080
-app.listen(8080, function () {
-    console.log('Node app is running on port 8080...');
+app.listen(port, function () {
+    console.log('Node app is running on port ' + port +'...');
 });
 
