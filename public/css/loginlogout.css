@@ -17,6 +17,9 @@ body{
 #jobCatWrap{
   width:100%;
   height:100%;
+  background: url("/img/SVG/middlecloud.svg") no-repeat center bottom,
+  url("/img/SVG/rightcloud.svg") no-repeat right bottom,
+  url("/img/SVG/leftcloud.svg") no-repeat left bottom;
 }
 #jobCatContainer{
   width:990px;
@@ -30,8 +33,6 @@ body{
 #floatingGraphic4,
 #floatingGraphic5,
 #floatingGraphic6{
-  width:60px;
-  height: 60px;
   display: block;
   background-color: #777;
   position: absolute;
@@ -40,31 +41,49 @@ body{
   top: 30px;
   left: 150px;
   animation: slidein 5s linear infinite;
+  background: url("/img/SVG/pdflarge.svg") no-repeat top center;
+  width:80px;
+  height:60px;
 }
 #floatingGraphic2{
   top:100px;
   left:50px;
   animation: slightRotate 6s linear infinite;
+  width:45px;
+  height:60px;
+  background: url("/img/SVG/wordsmall.svg") no-repeat top center;
 }
 #floatingGraphic3{
   top:150px;
   left:170px;
   animation: slightRotate 7s linear infinite;
+  width:45px;
+  height:60px;
+  background: url("/img/SVG/blanksmall.svg") no-repeat top center;
 }
 #floatingGraphic4{
   top: 70px;
   right: 140px;
   animation: slightRotate 3s linear infinite;
+  background: url("/img/SVG/wordlarge.svg") no-repeat top center;
+  width:80px;
+  height:60px;
 }
 #floatingGraphic5{
   animation: slightRotate 6s linear infinite;
   top:150px;
   right:10px;
+  height:70px;
+  width:53px;
+  background: url("/img/SVG/blanklarge.svg") no-repeat top center;
 }
 #floatingGraphic6{
   animation: bottomSlide 3s linear infinite;
   top: 250px;
   right: 160px;
+  background: url("/img/SVG/pdflarge.svg") no-repeat top center;
+  width:45px;
+  height:60px;
 }
 @keyframes slidein {
   0%   {margin-left:0% }
@@ -124,11 +143,11 @@ h2{
   border-radius: 10px;
   box-shadow: 0 6px 0 #157C1A;
   border: 5px solid #157C1A;
-  padding: 26px 0 0 0;
+  padding: 10px 0 0 0;
   font-size: 34px;
   color: #FFF;
   width: 300px;
-  height: 60px;
+  height: 80px;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
