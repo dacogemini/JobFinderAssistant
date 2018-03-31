@@ -7,6 +7,11 @@ var cat = {
       cb(res); // callback
     });
   },
+  allPostings: function(cb) {
+    orm.all("jobs_applied", function(res) {
+      cb(res); // callback
+    });
+  },
   // The variables cols and vals are arrays.
   create: function(cols, vals, cb) {
     orm.create("JobCat_db", cols, vals, function(res) {

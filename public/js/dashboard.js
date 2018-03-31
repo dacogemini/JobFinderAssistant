@@ -25,10 +25,3 @@ function AjaxPost (jobApplied) {
     });
 }
 
-
-
-
-
-
-var currentDate = Date.now();
-

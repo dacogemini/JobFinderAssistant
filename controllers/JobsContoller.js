@@ -5,6 +5,7 @@
 // Default route
 var express = require("express");
 var router = express.Router();
+var db = require("../config/connection.js")
 
 // Import the model (cat.js) to use its database functions.
 var jobs = require("../models/jobs.js");
@@ -44,23 +45,41 @@ router.get("/dashboard", function (req, res) {
     });
 });
 
-router.post("/api/job", function (req, res) {
-    console.log("received ajax !!!  " + req);
-    jobs.create([ //*  cols, vals, cb
-        "category",
-        "company",
-        "description",
-        "salary",
-        "skills"
-    ], [
-        req.body.category, req.body.company, req.body.description, req.body.salary, req.body.salary, req.body.skills,
-    ], function (result) {
-        // Send back the ID of the new quote
-        res.json({
-            id: result.insertId
-        });
+router.get("/postings", function (req, res) {
+    jobs.all(function (data) { // (jobs) match hbs 
+        var hbsObject = {
+            jobs: data // (jobs) match hbs 
+        };
+        console.log(hbsObject); // logs database
+        res.render("postings", hbsObject); // match index.hbs
     });
 });
+
+router.post("/api/job", function (req, res) {
+    console.log("received ajax !!!  " + req);
+    var jobPosting = req.body;
+    console.log(jobPosting.resumeFile);
+
+    db.query("INSERT INTO jobs_applied SET ?",
+        {
+            company: jobPosting.company,
+            cover_letter: jobPosting.coverLetterFile,
+            resumefile: jobPosting.resumeFile,
+            url: jobPosting.url
+        }
+    )
+});
+
+router.get("/api/job", function (req, res) {
+    jobs.allPostings(function (data) { // (jobs) match hbs 
+        var databasePosts = {
+            jobs: data // (jobs) match hbs 
+        };
+        console.log(databasePosts);
+        res.send(databasePosts);
+    });
+});
+
 router.put("/api/job/:id", function (req, res) {
     var condition = "id = " + req.params.id;
 
