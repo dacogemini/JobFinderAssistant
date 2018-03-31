@@ -3,22 +3,22 @@ var mysql = require("mysql");
 // =============================================================================
 // mysql connection
 // =============================================================================
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '2003Sv650',
-    database: 'JobCat_db'
-})
-
-// Make connection.
-connection.connect(function(err) {
-    if (err) {
-      console.error("JobCat_db error connecting: " + err.stack);
-      return;
-    }
-    console.log("JobCat_db connected as id " + connection.threadId);
-  });
   
+var connection;
+if(process.env.JAWSDB_URL) {
+ //Heroku deployment
+   connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+ //local host
+   connection = mysql.createConnection({
+       root: 3000,
+       host: "localhost",
+       user: "root",
+       password: "",
+       database: "db_name",
+   });
+};
+
   // Export connection for our ORM to use.
   module.exports = connection;
 
