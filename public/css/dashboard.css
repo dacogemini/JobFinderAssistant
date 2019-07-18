@@ -5,6 +5,11 @@ body {
     /* margin: 10px;
     padding: 0px; */
 }
+.plunkimg {
+    background-color: #6B913E;
+    width: 35%;
+    height: auto;
+}
 #container-header {
     width: 100%;
     /* margin: 0;
@@ -95,6 +100,27 @@ p {
     text-align: center;
 }
 .container {
-    margin-top: 10%;
-    margin-left: 20%;
+    display: inline-grid;
+    grid-template-columns: 40px 50px auto 50px 40px;
+    grid-template-rows: 200px 100px auto;
+}
+.lgo {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+.txt-01 {
+    margin-left: -200px;
+    margin-top: 100px; 
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.txt-02 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
