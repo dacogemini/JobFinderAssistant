@@ -7,7 +7,6 @@ const mysql = require('mysql');
 
 var Job = require('./models/jobs.js');
 
-/*Nick added a favicon*/
 // const favicon = require('serve-favicon');
 // app.use(favicon(path.join(__dirname, 'app/public', 'favicon.ico')));
 

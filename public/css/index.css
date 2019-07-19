@@ -1,0 +1,18 @@
+.container {
+	background-color: rgb(245, 42, 7);
+    display: grid;
+    /* grid-gap: 3px; */
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 250px 200px 40px;
+}
+.header {
+	grid-column: 1 / -1;
+}
+
+.content {
+	grid-column: 2 / -1;
+}
+
+.footer {
+	grid-column: 1 / -1;
+}
