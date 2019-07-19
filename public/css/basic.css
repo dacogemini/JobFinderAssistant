@@ -10,21 +10,41 @@ html, body {
   background-color: #024C69;
   margin: 10px;
 }
+
+nav {
+  display: grid;
+  font-family: 'Staatliches', cursive;
+  font-size: 30px;
+  background-color: rgb(13, 31, 37);
+  color: rgb(214, 196, 161);
+  padding: 10px;
+  justify-items: left;
+  text-align: left;
+}
+
 /* HEADER */
-.container > div:nth-child(1n) {
-  background-color: #FEB018;	
-}
 .container > div:nth-child(2n) {
-  background-color: #FEB018;
-  color: #024C69;
-  font-family: 'Staatliches', cursive; 
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-family: 'Staatliches', cursive;
   font-size: 80px;
+  color: #024C69;
+  background-color: #FDB016;	
 }
 
+/* CONTENT */
 .container > div:nth-child(3n) {
-  background-color: #88d8b0;
+  background-color: #b4afb3;
 }
 
+/* FOOTER */
 .container > div:nth-child(4n) {
-      background-color: #ffcc5c;
+      display: flex;
+      justify-content: spa;
+      align-items: center;
+      background-color: #FDB016;
+      color: #024C69;
+      font-family: 'Staatliches', cursive;
+      font-size: 100px; 
 }

@@ -1,0 +1,23 @@
+.container {
+	  background-color: rgb(48, 47, 46);
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 1fr;
+    grid-template-rows: 50px 200px 200px 50px;
+}
+
+/* NAVBAR */
+nav {
+    grid-column: 1 / -1;
+  }
+
+.header {
+	grid-column: 1 / -1;
+}
+
+.content {
+	grid-column: 1 / -1;
+}
+
+.footer {
+	grid-column: 1 / -1;
+}

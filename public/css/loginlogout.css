@@ -120,11 +120,10 @@ h1{
   color:#FFF;
 }
 h2{
-  font-size: 24px;
-  margin:0;
-  padding: 0;
+  color: #024C69;
+  font-family: 'Staatliches', cursive;
+  font-size: 24px; 
   text-align: center;
-  color:#FFF;
 }
 #btnWrap{
       margin-top: 40px;
